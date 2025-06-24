@@ -1,1 +1,4 @@
 .DS_Store
+.stylelintrc
+package-lock.json
+package.json
