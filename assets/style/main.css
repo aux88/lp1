@@ -107,12 +107,18 @@ a:hover, button:hover {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     display: flex;
     width: 100%;
     height: 7rem;
     margin: 0;
     background-color: #fff;
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.main,
+.footer {
+    z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -507,10 +513,29 @@ ul.reason-list-group {
     margin: 2.3rem 1.6rem 3.5rem;
 }
 
+@media(min-width: 768px) {
+    ul.reason-list-group {
+        margin: 2.3rem 2rem 3.5rem;
+    }
+}
+
 ul.reason-list-group li {
     display: flex;
     flex-direction: column;
     margin-bottom: 3.5rem;
+}
+
+@media(min-width: 768px) {
+    ul.reason-list-group li {
+        flex-direction: row;
+        column-gap: 4rem;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+
+    ul.reason-list-group li:nth-child(even) {
+        flex-direction: row-reverse;
+    }
 }
 
 ul.reason-list-group figure {
@@ -518,6 +543,15 @@ ul.reason-list-group figure {
     height: 22rem;
     overflow: hidden;
     border-radius: 1.2rem;
+}
+
+@media(min-width: 768px) {
+    ul.reason-list-group figure {
+        width: 58.0rem;
+        height: 35.2rem;
+        border-radius: 1.2rem;
+    }
+
 }
 
 ul.reason-list-group figure img {
@@ -532,21 +566,41 @@ ul.reason-list-group li h3 span.reason-list-point::before {
     font-size: 2.4rem;
     font-style: italic;
     font-weight: 700;
-    line-height: clac(36/24);
+    line-height: calc(36/24);
     color: #F11F8D;
     content: 'Point ';
+}
+
+@media(min-width: 768px) {
+ul.reason-list-group li h3 span.reason-list-point::before {
+    font-size: 2.8rem;
+    line-height: calc(36/28);
+}
+}
+
+@media(min-width: 768px) {
+    .reason-list-text {
+        width: 50%;
+    }
 }
 
 ul.reason-list-group li h3 span.reason-list-point {
     display: block;
     margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
     font-family: Poppins, sans-serif;
     font-size: 3.6rem;
     font-style: italic;
     font-weight: 700;
     line-height: 1;
     color: #F11F8D;
+}
+
+@media(min-width: 768px) {
+ul.reason-list-group li h3 span.reason-list-point {
+    font-size: 4.2rem;
+    line-height: calc(36/42);
+}
 }
 
 ul.reason-list-group li h3 {
@@ -556,22 +610,20 @@ ul.reason-list-group li h3 {
     line-height: calc(28/20);
 }
 
+@media(min-width: 768px) {
+ul.reason-list-group li h3 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: calc(36/24);
+}
+}
+
 ul.reason-list-group li p {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: calc(28/16);
 }
 
-@media (min-width: 768px) {
-    ul.reason-list-group {
-        margin: 3.2rem 1rem 7.2rem;
-    }
-
-    ul.reason-list-group li {
-        flex-direction: row;
-    }
-
-}
 
 
 /*
@@ -613,7 +665,7 @@ ul.reason-list-group li p {
     align-items: center;
     justify-content: center;
     width: 30.4rem;
-    height: 6.8rem;
+    height: 7rem;
     margin: 0 auto;
     font-size: 1.8rem;
     font-weight: 700;
@@ -622,4 +674,167 @@ ul.reason-list-group li p {
     letter-spacing: 0.2rem;
     background: linear-gradient(90deg, #0271E0, #53A2F0);
     border-radius: 3.3rem
+}
+
+/* コース・目的
+------------------------- */
+.cource {
+    padding-top: 7.4rem;
+    padding-bottom: 6rem;
+}
+
+@media(min-width: 768px) {
+    .cource {
+        padding-top: 8.8rem;
+        padding-bottom: 7rem;
+    }
+}
+
+/* タブ */
+.tab{
+    padding-top: 3rem;
+}
+
+@media(min-width: 768px) {
+    .tab{
+        padding-top: 4rem;
+    }
+}
+
+.st-theme-basic {
+  border: none;
+}
+
+@media(min-width: 768px) {
+    .st-theme-basic {
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+}
+
+/* タブナビゲーション */
+.tab.st>.nav {
+  flex-direction: row !important;
+  column-gap: 1.5rem;
+    padding: 0 1.6rem;
+}
+
+
+@media(min-width: 768px) {
+  .tab.st>.nav {
+    column-gap: 3.5rem;
+        padding: 0;
+  }
+}
+
+.tab.st-theme-basic>.nav {
+  box-shadow: none;
+}
+
+.tab.st-theme-basic>.nav .nav-link {
+    padding: 1.6rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: calc(36 / 18);
+    color: rgb(51 51 51 / 50%)!important;
+    background-color: #F0F0F0;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
+
+@media(min-width: 768px) {
+  .tab.st-theme-basic>.nav .nav-link {
+    font-size: 2.4rem;
+    line-height: calc(36 / 24);
+            padding: 1.8rem 0;
+  }
+}
+
+/* アクティブ状態 */
+.tab.st-theme-basic>.nav .nav-link.active {
+  color: rgb(51 51 51 / 100%)!important;
+  background-color: #F2F9FF;
+}
+
+.tab.st-theme-basic>.nav .nav-link.active::after {
+  background-color: unset !important;
+}
+
+.tab-content {
+  text-align: center;
+  background-color: #F2F9FF;
+}
+
+.tab.st-theme-basic>.tab-content>.tab-pane {
+    padding: 2.8rem 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .tab.st-theme-basic>.tab-content>.tab-pane {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3.1rem;
+        row-gap: 0.4rem;
+        padding: 3.2rem 3.3rem 0rem;
+        justify-content: space-between;
+    }
+}
+
+.tab-pane img {
+  width: 100%;
+  height: 220px;
+  border-radius: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .tab-pane img {
+  height: 329px;
+  }
+}
+
+.tab-content-course-name {
+    position: relative;
+    color: #333333;
+    padding-top: 1.1rem;
+    padding-left: 2.2rem;
+    margin-bottom: 1.1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.tab-content-course-name::before {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    width: 1.4rem;
+    height: 1.2rem;
+    content: '';
+    background: url('/assets/image/arrow-right-blue.svg') no-repeat center;
+    background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .tab-content-course-name {
+padding-top: 1.2rem;
+        padding-left: 1.3em;
+    font-size: 2.0rem;
+    line-height: calc(36/20)
+  }
+
+  .tab-content-course-name::before {
+        top: 2rem;
+        left: 0;
+        width: 1.6rem;
+        height: 2rem;
+  }
+}
+
+.course-tab-content-item {
+  padding-bottom: 2.1rem;
+}
+
+@media (min-width: 768px) {
+  .course-tab-content-item {
+    width: 48.3%;
+  }
 }
