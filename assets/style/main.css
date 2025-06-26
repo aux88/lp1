@@ -866,6 +866,13 @@ ul.reason-list-group li p {
     object-fit: cover;
 }
 
+.tab-pane .course-tab-content-item img:hover {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2, 1.2);
+    transition: transform .3s ease;
+}
+
 #tab-1 .course-tab-content-item:nth-child(1) img {
     height: 109%;
     object-position: -0.8rem -1.4rem;
@@ -1175,6 +1182,7 @@ ul.reason-list-group li p {
     background-repeat: no-repeat;
     background-size: 105%;
 }
+
 
 @media (min-width: 768px) {
     .information__faq a.information_link-area {
