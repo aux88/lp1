@@ -47,7 +47,7 @@
         <ul class="hamburger-menu-list-group">
           <li><a href="#reason">選ばれる3つの理由</a></li>
           <li><a href="#course">コース・目的</a></li>
-          <li><a href="#plan">費用</a></li>
+          <li><a href="#price">費用</a></li>
         </ul>
         <!-- 入学説明会に申し込むボタン -->
         <a href="#" class="button header-entry-button">入学説明会に申し込む</a>
@@ -95,7 +95,9 @@
         <h2 class="section-title">選ばれる<span class="section-title__highlight—pink">3</span>つの理由</h2>
         <ul class="reason-list-group">
           <li>
-            <figure><img src="/assets/image/point01.jpg" alt="point1"></figure>
+            <div class="reason-list-image">
+              <figure><img src="/assets/image/point01.jpg" alt="point1"></figure>
+            </div>
             <div class="reason-list-text">
               <h3><span class="reason-list-point">1</span>実績のある講師陣だから安心</h3>
               <p>
@@ -104,7 +106,9 @@
             </div>
           </li>
           <li>
-            <figure><img src="/assets/image/point02.jpg" alt="point1"></figure>
+            <div class="reason-list-image">
+              <figure><img src="/assets/image/point02.jpg" alt="point1"></figure>
+            </div>
             <div class="reason-list-text">
               <h3><span class="reason-list-point">2</span>オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
               <p>
@@ -113,7 +117,9 @@
             </div>
           </li>
           <li>
-            <figure><img src="/assets/image/point03.jpg" alt="point1"></figure>
+            <div class="reason-list-image">
+              <figure><img src="/assets/image/point03.jpg" alt="point1"></figure>
+            </div>
             <div class="reason-list-text">
               <h3><span class="reason-list-point">3</span>徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。</h3>
               <p>
@@ -132,9 +138,9 @@
     </section>
 
     <!-- コース・目的 -->
-    <section class="cource">
+    <section class="course">
       <div class="contents-width">
-        <h2 class="section-title">コース・目的</h2>
+        <h2 class="section-title section-title-course">コース・目的</h2>
 
         <!-- タブ -->
         <div id="smarttab" class="tab">
@@ -148,23 +154,30 @@
             <div id="tab-1" class="tab-pane" role="tabpanel">
               <!-- 1個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource01.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course01.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">高卒生</div>
-
               </div>
               <!-- 2個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource02.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course02.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">高校3年生</div>
               </div>
               <!-- 3個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource03.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course03.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">高校2年生</div>
               </div>
               <!-- 4個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource04.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course04.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">高校1年生</div>
               </div>
             </div>
@@ -173,22 +186,30 @@
 
               <!-- 1個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource05.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course05.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">難関大学・医学部合格を目指す</div>
               </div>
               <!-- 2個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource06.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course06.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">名門私立大学合格を目指す</div>
               </div>
               <!-- 3個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource07.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course07.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">国公立大学合格を目指す</div>
               </div>
               <!-- 4個目 -->
               <div class="course-tab-content-item">
-                <img src="/assets/image/cource08.jpg" alt="">
+                <figure class="course-image">
+                  <img src="/assets/image/course08.jpg" alt="">
+                </figure>
                 <div class="tab-content-course-name">海外の大学合格を目指す</div>
               </div>
             </div>
@@ -204,40 +225,40 @@
     </section>
 
     <!-- 費用 -->
-    <section class="plan">
+    <section class="price">
       <div class="contents-width">
-        <h2 class="section-title">費用</h2>
+        <h2 class="section-title section-title-price">費用</h2>
         <!-- テーブル -->
-        <table class="plan-table">
+        <table class="price-table">
           <thead>
             <tr>
-              <th class="count">年間講数</th>
-              <th>年間授業料（税込み）</th>
+              <th class="th-count">年間講数</th>
+              <th class="th-price">年間授業料（税込み）</th>
             </tr>
           </thead>
           <tr>
             <td>5講</td>
-            <td><span class="fee">24,500</span></td>
+            <td class="td-price"><span class="price">24,500</span></td>
           </tr>
           <tr>
             <td>10講</td>
-            <td><span class="fee">49,000</span></td>
+            <td class="td-price"><span class="price">49,000</span></td>
           </tr>
           <tr>
             <td>11講</td>
-            <td><span class="fee">53,900</span></td>
+            <td class="td-price"><span class="price">53,900</span></td>
           </tr>
           <tr>
             <td>12講</td>
-            <td><span class="fee">58,800</span></td>
+            <td class="td-price"><span class="price">58,800</span></td>
           </tr>
           <tr>
             <td>22講</td>
-            <td><span class="fee">107,800</span></td>
+            <td class="td-price"><span class="price">107,800</span></td>
           </tr>
           <tr>
             <td>24講</td>
-            <td><span class="fee">117,600</span></td>
+            <td class="td-price"><span class="price">117,600</span></td>
           </tr>
         </table>
       </div>

@@ -192,7 +192,7 @@ a:hover, button:hover {
     nav.hamburger-menu {
         display: flex;
         visibility: visible;
-        column-gap: 5rem;
+        column-gap: 3rem;
     }
 }
 
@@ -205,28 +205,30 @@ nav.hamburger-menu-active {
 
 ul.hamburger-menu-list-group {
     display: flex;
-    flex-direction: column;
-    row-gap: 2.5rem;
-    margin: 2.5rem 2rem 3.2rem;
+    flex-direction: row;
+    column-gap: 5rem;
+    justify-content: space-between;
+    padding-top: 0;
+    margin: auto;
 }
 
-
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     ul.hamburger-menu-list-group {
-        flex-direction: row;
-        column-gap: 5rem;
-        justify-content: space-between;
-        padding-top: 0;
-        margin: auto;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        margin: 2.5rem 2rem 3.2rem;
     }
 }
 
-ul.hamburger-menu-list-group li {
-    position: relative;
-    padding-bottom: 2.1rem;
-    padding-left: 2.7rem;
-    font-size: 1.8rem;
-    color: #fff;
+
+@media (max-width: 767px) {
+    ul.hamburger-menu-list-group li {
+        position: relative;
+        padding-bottom: 2.1rem;
+        padding-left: 2.7rem;
+        font-size: 1.8rem;
+        color: #fff;
+    }
 }
 
 ul.hamburger-menu-list-group li::before {
@@ -292,13 +294,14 @@ ul.hamburger-menu-list-group li a {
         justify-content: center;
         width: 28.2rem;
         height: 6.1rem;
-        margin: 0 auto;
+        margin: 0 2rem;
         font-size: 1.8rem;
         font-weight: 700;
         line-height: calc(26/18);
         color: #fff;
         background: linear-gradient(90deg, #0271E0, #53A2F0);
         border-radius: 3.3rem;
+        letter-spacing: 0.2rem;
     }
 }
 
@@ -513,13 +516,19 @@ ul.hamburger-menu-list-group li a {
     margin-top: .6rem;
 }
 
+@media(min-width: 768px) {
+    .reason {
+        margin-bottom: 7.2rem;
+    }
+}
+
 ul.reason-list-group {
     margin: 2.3rem 1.6rem 3.5rem;
 }
 
 @media(min-width: 768px) {
     ul.reason-list-group {
-        margin: 2.3rem 2rem 3.5rem;
+        margin: 2.9rem 2rem 3.5rem;
     }
 }
 
@@ -534,7 +543,7 @@ ul.reason-list-group li {
         flex-direction: row;
         column-gap: 4rem;
         justify-content: space-between;
-        margin-bottom: 5rem;
+        margin-bottom: 4.8rem;
     }
 
     ul.reason-list-group li:nth-child(even) {
@@ -544,25 +553,59 @@ ul.reason-list-group li {
 
 ul.reason-list-group figure {
     width: 100%;
-    height: 22rem;
+    aspect-ratio: 343 / 220;
     overflow: hidden;
     border-radius: 1.2rem;
 }
 
 @media(min-width: 768px) {
+    .reason-list-image {
+        width: 50%;
+    }
+
     ul.reason-list-group figure {
-        width: 58.0rem;
-        height: 35.2rem;
-        border-radius: 1.2rem;
+        aspect-ratio: 560 / 346;
     }
 
 }
 
-ul.reason-list-group figure img {
+ul.reason-list-group li figure img {
     display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    object-position: left top;
+}
+
+ul.reason-list-group li:nth-child(1) figure img {
+    height: 108%;
+    object-position: -4rem -0.4rem;
+}
+
+ul.reason-list-group li:nth-child(2) figure img {
+    height: 117%;
+    object-position: -2.1rem -2.4rem;
+}
+
+ul.reason-list-group li:nth-child(3) figure img {
+    height: 116%;
+    object-position: -1rem -0.5rem;
+}
+
+@media(min-width: 768px) {
+    ul.reason-list-group li:nth-child(1) figure img {
+        height: 105%;
+        object-position: -6rem -1rem;
+    }
+
+    ul.reason-list-group li:nth-child(2) figure img {
+        height: 114%;
+        object-position: -1.3rem -1rem;
+    }
+
+    ul.reason-list-group li:nth-child(3) figure img {
+        height: 115%;
+        object-position: 0;
+    }
 }
 
 ul.reason-list-group li h3 span.reason-list-point::before {
@@ -602,6 +645,8 @@ ul.reason-list-group li h3 span.reason-list-point {
 
 @media(min-width: 768px) {
     ul.reason-list-group li h3 span.reason-list-point {
+        margin-top: 1.3rem;
+        margin-bottom: 0.4rem;
         font-size: 4.2rem;
         line-height: calc(36/42);
     }
@@ -616,9 +661,9 @@ ul.reason-list-group li h3 {
 
 @media(min-width: 768px) {
     ul.reason-list-group li h3 {
-        margin-bottom: 2rem;
+        margin-bottom: 1.4rem;
         font-size: 2.4rem;
-        line-height: calc(36/24);
+        line-height: calc(42 / 24);
     }
 }
 
@@ -628,9 +673,7 @@ ul.reason-list-group li p {
     line-height: calc(28/16);
 }
 
-
-
-/*
+/* 入学説明会に申し込む
 ------------------------- */
 
 .entry {
@@ -644,7 +687,7 @@ ul.reason-list-group li p {
 @media (min-width: 768px) {
     .entry {
         height: 23.1rem;
-        padding: 5.6rem 0;
+        padding: 5rem 0 5.5rem;
     }
 }
 
@@ -658,8 +701,6 @@ ul.reason-list-group li p {
 
 @media (min-width: 768px) {
     .entry p {
-        padding-bottom: 2rem;
-        font-size: 1.6rem;
         line-height: calc(42/16);
     }
 }
@@ -680,16 +721,35 @@ ul.reason-list-group li p {
     border-radius: 3.3rem
 }
 
+@media (min-width: 768px) {
+    .entry button.entry-button {
+        width: 36rem;
+        height: 7.3rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: calc(36/24);
+        letter-spacing: 0rem;
+        padding-left: 1.7rem;
+    }
+}
+
 /* コース・目的
 ------------------------- */
-.cource {
+.course {
     padding-top: 7.4rem;
     padding-bottom: 6rem;
 }
 
+
+@media(max-width: 767px) {
+    .section-title-course {
+        padding-left: 1.6rem;
+    }
+}
+
 @media(min-width: 768px) {
-    .cource {
-        padding-top: 8.8rem;
+    .course {
+        padding-top: 8.2rem;
         padding-bottom: 7rem;
     }
 }
@@ -769,7 +829,7 @@ ul.reason-list-group li p {
 }
 
 .tab.st-theme-basic>.tab-content>.tab-pane {
-    padding: 2.8rem 1.6rem;
+    padding: 2.6rem 1.6rem;
 }
 
 @media (min-width: 768px) {
@@ -778,26 +838,110 @@ ul.reason-list-group li p {
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 0.4rem;
-        column-gap: 3.1rem;
         padding: 3.2rem 3.3rem 0;
     }
 }
 
-.tab-pane img {
+.tab-pane .course-image {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 343/220;
+    overflow: hidden;
     border-radius: 1.2rem;
 }
 
 @media (min-width: 768px) {
-    .tab-pane img {
-        height: 329px;
+    .tab-pane .course-image {
+        aspect-ratio: 532/329;
     }
 }
 
+.tab-pane .course-tab-content-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#tab-1 .course-tab-content-item:nth-child(1) img {
+    height: 109%;
+    object-position: -0.8rem -1.4rem;
+}
+
+#tab-1 .course-tab-content-item:nth-child(2) img {
+    height: 162%;
+    object-position: -18.2rem -12rem;
+}
+
+#tab-1 .course-tab-content-item:nth-child(3) img {
+    height: 107%;
+    object-position: 0 -0.4rem;
+}
+
+#tab-1 .course-tab-content-item:nth-child(4) img {
+    height: 127%;
+    object-position: -7.5rem -1.2rem;
+}
+
+#tab-2 .course-tab-content-item:nth-child(1) img {
+    height: 117%;
+    object-position: 0.1rem -1.2rem;
+}
+
+#tab-2 .course-tab-content-item:nth-child(2) img {
+    height: 112%;
+    object-position: -1.2rem -1.5rem;
+}
+
+#tab-2 .course-tab-content-item:nth-child(3) img {
+    height: 110%;
+    object-position: -1rem -1.2rem;
+}
+
+#tab-2 .course-tab-content-item:nth-child(4) img {
+    height: 114%;
+    object-position: -1.7rem -1.2rem;
+}
+
+@media (min-width: 768px) {
+    #tab-1 .course-tab-content-item:nth-child(1) img {
+        height: 114%;
+        object-position: -1.1rem -1.4rem;
+    }
+
+    #tab-1 .course-tab-content-item:nth-child(2) img {
+        height: 160%;
+        object-position: -24.2rem -16.6rem;
+    }
+
+    #tab-1 .course-tab-content-item:nth-child(3) img {
+        height: 116%;
+        object-position: -1.4rem -0.7rem;
+    }
+
+    #tab-1 .course-tab-content-item:nth-child(4) img {
+        height: 126%;
+        object-position: -8.8rem .2rem
+    }
+
+    #tab-2 .course-tab-content-item:nth-child(1) img {
+        height: 124%;
+        object-position: -0.1rem -1.6rem;
+    }
+
+    #tab-2 .course-tab-content-item:nth-child(2) img {
+        height: 114%;
+        object-position: -1.8rem -1.9rem;
+    }
+
+    #tab-2 .course-tab-content-item:nth-child(3) img {
+        height: 113%;
+        object-position: -1.5rem -1.5rem;
+    }
+
+}
+
+
 .tab-content-course-name {
     position: relative;
-    padding-top: 1.1rem;
+    padding-top: 1.4rem;
     padding-left: 2.2rem;
     margin-bottom: 1.1rem;
     font-size: 2rem;
@@ -808,7 +952,7 @@ ul.reason-list-group li p {
 
 .tab-content-course-name::before {
     position: absolute;
-    top: 1.8rem;
+    top: 2rem;
     left: 0;
     width: 1.4rem;
     height: 1.2rem;
@@ -819,14 +963,14 @@ ul.reason-list-group li p {
 
 @media (min-width: 768px) {
     .tab-content-course-name {
-        padding-top: 1.2rem;
-        padding-left: 1.3em;
+        padding-top: 1.3rem;
+        padding-left: 1.5em;
         font-size: 2.0rem;
         line-height: calc(36/20)
     }
 
     .tab-content-course-name::before {
-        top: 2rem;
+        top: 2.2rem;
         left: 0;
         width: 1.6rem;
         height: 2rem;
@@ -839,34 +983,40 @@ ul.reason-list-group li p {
 
 @media (min-width: 768px) {
     .course-tab-content-item {
-        width: 48.3%;
+        width: 48.7%;
     }
 }
 
 /* 費用
 ------------------------- */
 
-.plan {
+.price {
     padding-top: 7.4rem;
     padding-bottom: 6.1rem;
 }
 
 @media (min-width: 768px) {
-    .plan {
+    .price {
         padding-top: 7.9rem;
         padding-bottom: 3rem;
     }
 }
 
-.plan .contents-width {
+@media(max-width: 767px) {
+    .section-title-price {
+        padding-left: 2rem;
+        letter-spacing: 0.6rem;
+    }
+}
+
+.price .contents-width {
     padding: 0 1.6rem;
 }
 
-.plan table {
+.price table {
     width: 100%;
     margin-top: 2.8rem;
     font-size: 1.6rem;
-    font-weight: 400;
     line-height: calc(36/16);
     text-align: center;
     border-collapse: collapse;
@@ -874,7 +1024,7 @@ ul.reason-list-group li p {
 }
 
 @media (min-width: 768px) {
-    .plan table {
+    .price table {
         max-width: 60rem;
         margin: 4rem auto;
         font-size: 1.8rem;
@@ -882,40 +1032,77 @@ ul.reason-list-group li p {
     }
 }
 
-.plan th, td {
+.price th, td {
+    font-weight: 400;
     border: solid 1px #ccc;
 }
 
-.plan-table thead {
+.price-table thead {
     height: 6.7rem;
     background-color: #f5f5f5;
 }
 
-.plan-table td {
+.price-table td {
     height: 6.4rem;
 }
 
 @media (min-width: 768px) {
-    .plan-table thead {
+    .price-table thead {
         height: 7.5rem;
     }
 
-    .plan-table tbody {
+    .price-table tbody {
         height: 46.8rem;
     }
 }
 
-.plan-table .count {
+.price-table .th-count {
     width: 34%;
 }
 
+.price-table .th-price {
+    padding-left: 2.5rem;
+    text-align: left;
+}
+
 @media (min-width: 768px) {
-    .plan-table .count {
+    .price-table .th-price {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .price-table .th-count {
         width: 24%;
     }
 }
 
-.plan-table .fee {
+.price-table .td-price {
+    padding-top: 0.4rem;
+    padding-right: 0.6rem;
+}
+
+@media (min-width: 768px) {
+    .price-table .td-price {
+        padding-top: 0.6rem;
+        padding-left: 0.4rem;
+    }
+}
+
+.price-table tr:last-child td:nth-child(2) {
+    padding-right: 0;
+    padding-left: 1.7rem;
+}
+
+@media (min-width: 768px) {
+    .price-table tr:last-child td:nth-child(2) {
+        padding-left: 0;
+    }
+}
+
+.price-table .price {
     font-family: Poppins, sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
@@ -923,19 +1110,19 @@ ul.reason-list-group li p {
     color: #F11F8D;
 }
 
-.plan-table .fee::after {
+.price-table .price::after {
     font-size: 1.6rem;
     color: #F11F8D;
     content: '円';
 }
 
 @media (min-width: 768px) {
-    .plan-table .fee {
+    .price-table .price {
         font-size: 3.2rem;
         line-height: calc(36/32);
     }
 
-    .plan-table .fee::after {
+    .price-table .price::after {
         font-size: 1.8rem;
         color: #F11F8D;
         content: '円';
@@ -979,6 +1166,15 @@ ul.reason-list-group li p {
 
 .information__faq a.information_link-area {
     background-image: url(/assets/image/faq01.jpg);
+    background-repeat: no-repeat;
+    background-size: 105%;
+}
+
+@media (min-width: 768px) {
+    .information__faq a.information_link-area {
+        background-position: -1.2rem -1rem;
+        background-size: 104%;
+    }
 }
 
 .information__faq a.information_link-area::after {
@@ -1014,16 +1210,21 @@ ul.reason-list-group li p {
         line-height: calc(36/32);
         justify-content: center;
         padding-left: 0;
-        padding-right: 1rem;
-    }
-
-    .information__search a.information_link-area::after {
-        padding-right: 4rem;
+        padding-right: 0rem;
     }
 }
 
 .information__search a.information_link-area {
     background-image: url(/assets/image/faq02.jpg);
+    background-position: -1.4rem -1.4rem;
+    background-size: 110%;
+}
+
+@media (min-width: 768px) {
+    .information__search a.information_link-area {
+        background-position: -17.4rem -8.4rem;
+        background-size: 127%;
+    }
 }
 
 
@@ -1041,7 +1242,7 @@ ul.reason-list-group li p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8.3rem;
+    height: 8.6rem;
     padding-left: 1.6rem;
     font-family: Poppins, sans-serif;
     font-size: 1.3rem;
@@ -1053,6 +1254,5 @@ ul.reason-list-group li p {
     .footer {
         height: 12rem;
         padding-left: 0;
-        padding-right: 3rem;
     }
 }
