@@ -312,6 +312,7 @@ ul.hamburger-menu-list-group li a {
 
 @media (min-width: 768px) {
     .top {
+        padding-bottom: 10.1rem;
         margin-top: 10.1rem;
     }
 }
@@ -328,7 +329,6 @@ ul.hamburger-menu-list-group li a {
     width: 100vw;
     height: 100%;
     content: "";
-    object-fit: none;
     background-image: url("/assets/image/main_visual.jpg");
     background-repeat: no-repeat;
     background-position: -1.6rem -7rem;
@@ -341,20 +341,22 @@ ul.hamburger-menu-list-group li a {
     }
 
     .top .main-visual::before {
-        background-position: 11.7rem -15.6rem;
-        background-size: 76%;
+        right: 0;
+        width: 76%;
+        background-position: 1.5rem;
+        background-size: cover;
     }
 }
 
 .top .top-title-block {
     padding-top: 3.5rem;
-    margin-left: 1.6rem;
+    padding-left: 1.6rem;
 }
 
 @media (min-width: 768px) {
     .top .top-title-block {
         padding-top: 10.4rem;
-        margin-left: 5rem;
+        padding-left: 5rem;
     }
 }
 
@@ -460,13 +462,15 @@ ul.hamburger-menu-list-group li a {
 
 @media (min-width: 768px) {
     .top-button-area {
+        display: flex;
+        padding: 0 1rem;
         position: absolute;
         top: 59rem;
         right: 0;
         left: 0;
         flex-direction: row;
         justify-content: space-between;
-        max-width: 110rem;
+        max-width: 112rem;
     }
 }
 
@@ -482,7 +486,7 @@ ul.hamburger-menu-list-group li a {
 
 @media (min-width: 768px) {
     .top-button-area button {
-        width: 34rem;
+        width: 31%;
         height: 7.5rem;
         font-size: 2.4rem;
         line-height: calc(36/24);
@@ -572,10 +576,10 @@ ul.reason-list-group li h3 span.reason-list-point::before {
 }
 
 @media(min-width: 768px) {
-ul.reason-list-group li h3 span.reason-list-point::before {
-    font-size: 2.8rem;
-    line-height: calc(36/28);
-}
+    ul.reason-list-group li h3 span.reason-list-point::before {
+        font-size: 2.8rem;
+        line-height: calc(36/28);
+    }
 }
 
 @media(min-width: 768px) {
@@ -597,10 +601,10 @@ ul.reason-list-group li h3 span.reason-list-point {
 }
 
 @media(min-width: 768px) {
-ul.reason-list-group li h3 span.reason-list-point {
-    font-size: 4.2rem;
-    line-height: calc(36/42);
-}
+    ul.reason-list-group li h3 span.reason-list-point {
+        font-size: 4.2rem;
+        line-height: calc(36/42);
+    }
 }
 
 ul.reason-list-group li h3 {
@@ -611,11 +615,11 @@ ul.reason-list-group li h3 {
 }
 
 @media(min-width: 768px) {
-ul.reason-list-group li h3 {
-    margin-bottom: 2rem;
-    font-size: 2.4rem;
-    line-height: calc(36/24);
-}
+    ul.reason-list-group li h3 {
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+        line-height: calc(36/24);
+    }
 }
 
 ul.reason-list-group li p {
@@ -691,18 +695,18 @@ ul.reason-list-group li p {
 }
 
 /* タブ */
-.tab{
+.tab {
     padding-top: 3rem;
 }
 
 @media(min-width: 768px) {
-    .tab{
+    .tab {
         padding-top: 4rem;
     }
 }
 
 .st-theme-basic {
-  border: none;
+    border: none;
 }
 
 @media(min-width: 768px) {
@@ -714,21 +718,21 @@ ul.reason-list-group li p {
 
 /* タブナビゲーション */
 .tab.st>.nav {
-  flex-direction: row !important;
-  column-gap: 1.5rem;
+    flex-direction: row !important;
+    column-gap: 1.5rem;
     padding: 0 1.6rem;
 }
 
 
 @media(min-width: 768px) {
-  .tab.st>.nav {
-    column-gap: 3.5rem;
+    .tab.st>.nav {
+        column-gap: 3.5rem;
         padding: 0;
-  }
+    }
 }
 
 .tab.st-theme-basic>.nav {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .tab.st-theme-basic>.nav .nav-link {
@@ -736,32 +740,32 @@ ul.reason-list-group li p {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: calc(36 / 18);
-    color: rgb(51 51 51 / 50%)!important;
+    color: rgb(51 51 51 / 50%) !important;
     background-color: #F0F0F0;
     border-radius: 1.2rem 1.2rem 0 0;
 }
 
 @media(min-width: 768px) {
-  .tab.st-theme-basic>.nav .nav-link {
-    font-size: 2.4rem;
-    line-height: calc(36 / 24);
-            padding: 1.8rem 0;
-  }
+    .tab.st-theme-basic>.nav .nav-link {
+        font-size: 2.4rem;
+        line-height: calc(36 / 24);
+        padding: 1.8rem 0;
+    }
 }
 
 /* アクティブ状態 */
 .tab.st-theme-basic>.nav .nav-link.active {
-  color: rgb(51 51 51 / 100%)!important;
-  background-color: #F2F9FF;
+    color: rgb(51 51 51 / 100%) !important;
+    background-color: #F2F9FF;
 }
 
 .tab.st-theme-basic>.nav .nav-link.active::after {
-  background-color: unset !important;
+    background-color: unset !important;
 }
 
 .tab-content {
-  text-align: center;
-  background-color: #F2F9FF;
+    text-align: center;
+    background-color: #F2F9FF;
 }
 
 .tab.st-theme-basic>.tab-content>.tab-pane {
@@ -772,33 +776,33 @@ ul.reason-list-group li p {
     .tab.st-theme-basic>.tab-content>.tab-pane {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 3.1rem;
-        row-gap: 0.4rem;
-        padding: 3.2rem 3.3rem 0rem;
         justify-content: space-between;
+        row-gap: 0.4rem;
+        column-gap: 3.1rem;
+        padding: 3.2rem 3.3rem 0;
     }
 }
 
 .tab-pane img {
-  width: 100%;
-  height: 220px;
-  border-radius: 1.2rem;
+    width: 100%;
+    height: 220px;
+    border-radius: 1.2rem;
 }
 
 @media (min-width: 768px) {
-  .tab-pane img {
-  height: 329px;
-  }
+    .tab-pane img {
+        height: 329px;
+    }
 }
 
 .tab-content-course-name {
     position: relative;
-    color: #333333;
     padding-top: 1.1rem;
     padding-left: 2.2rem;
     margin-bottom: 1.1rem;
     font-size: 2rem;
     font-weight: 700;
+    color: #333;
     text-align: left;
 }
 
@@ -814,27 +818,241 @@ ul.reason-list-group li p {
 }
 
 @media (min-width: 768px) {
-  .tab-content-course-name {
-padding-top: 1.2rem;
+    .tab-content-course-name {
+        padding-top: 1.2rem;
         padding-left: 1.3em;
-    font-size: 2.0rem;
-    line-height: calc(36/20)
-  }
+        font-size: 2.0rem;
+        line-height: calc(36/20)
+    }
 
-  .tab-content-course-name::before {
+    .tab-content-course-name::before {
         top: 2rem;
         left: 0;
         width: 1.6rem;
         height: 2rem;
-  }
+    }
 }
 
 .course-tab-content-item {
-  padding-bottom: 2.1rem;
+    padding-bottom: 2.1rem;
 }
 
 @media (min-width: 768px) {
-  .course-tab-content-item {
-    width: 48.3%;
-  }
+    .course-tab-content-item {
+        width: 48.3%;
+    }
+}
+
+/* 費用
+------------------------- */
+
+.plan {
+    padding-top: 7.4rem;
+    padding-bottom: 6.1rem;
+}
+
+@media (min-width: 768px) {
+    .plan {
+        padding-top: 7.9rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.plan .contents-width {
+    padding: 0 1.6rem;
+}
+
+.plan table {
+    width: 100%;
+    margin-top: 2.8rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: calc(36/16);
+    text-align: center;
+    border-collapse: collapse;
+    border: solid 3px #ccc;
+}
+
+@media (min-width: 768px) {
+    .plan table {
+        max-width: 60rem;
+        margin: 4rem auto;
+        font-size: 1.8rem;
+        line-height: calc(36/18);
+    }
+}
+
+.plan th, td {
+    border: solid 1px #ccc;
+}
+
+.plan-table thead {
+    height: 6.7rem;
+    background-color: #f5f5f5;
+}
+
+.plan-table td {
+    height: 6.4rem;
+}
+
+@media (min-width: 768px) {
+    .plan-table thead {
+        height: 7.5rem;
+    }
+
+    .plan-table tbody {
+        height: 46.8rem;
+    }
+}
+
+.plan-table .count {
+    width: 34%;
+}
+
+@media (min-width: 768px) {
+    .plan-table .count {
+        width: 24%;
+    }
+}
+
+.plan-table .fee {
+    font-family: Poppins, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: calc(36/28);
+    color: #F11F8D;
+}
+
+.plan-table .fee::after {
+    font-size: 1.6rem;
+    color: #F11F8D;
+    content: '円';
+}
+
+@media (min-width: 768px) {
+    .plan-table .fee {
+        font-size: 3.2rem;
+        line-height: calc(36/32);
+    }
+
+    .plan-table .fee::after {
+        font-size: 1.8rem;
+        color: #F11F8D;
+        content: '円';
+    }
+}
+
+/* よくあるご質問、お近くの教室を探す
+---------------------------------- */
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .information {
+        flex-direction: row;
+    }
+}
+
+.information__faq,
+.information__search {
+    width: 100%;
+}
+
+.information__faq a.information_link-area,
+.information__search a.information_link-area {
+    position: relative;
+    display: block;
+    height: 17rem;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+
+    .information__faq a.information_link-area,
+    .information__search a.information_link-area {
+        height: 32rem;
+    }
+}
+
+.information__faq a.information_link-area {
+    background-image: url(/assets/image/faq01.jpg);
+}
+
+.information__faq a.information_link-area::after {
+    content: 'よくあるご質問';
+}
+
+.information__search a.information_link-area::after {
+    content: 'お近くの教室を探す';
+}
+
+.information__faq a.information_link-area::after,
+.information__search a.information_link-area::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 1.6rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(28/22);
+    color: #fff;
+    background-color: rgb(0 0 0 / 30%);
+}
+
+@media (min-width: 768px) {
+
+    .information__faq a.information_link-area::after,
+    .information__search a.information_link-area::after {
+        font-size: 3.2rem;
+        line-height: calc(36/32);
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+
+    .information__search a.information_link-area::after {
+        padding-right: 4rem;
+    }
+}
+
+.information__search a.information_link-area {
+    background-image: url(/assets/image/faq02.jpg);
+}
+
+
+@media (min-width: 768px) {
+
+    .information__faq,
+    .information__search {
+        width: 50%;
+    }
+}
+
+/* フッター
+---------------------------------- */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8.3rem;
+    padding-left: 1.6rem;
+    font-family: Poppins, sans-serif;
+    font-size: 1.3rem;
+    line-height: calc(28/13);
+    background-color: #ddd;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        height: 12rem;
+        padding-left: 0;
+        padding-right: 3rem;
+    }
 }
