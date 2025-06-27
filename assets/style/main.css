@@ -486,7 +486,10 @@ a:hover, button:hover {
     }
 }
 
-.top-buttons button {
+.top-buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25rem;
     height: 4.8rem;
     font-size: 1.6rem;
@@ -497,7 +500,7 @@ a:hover, button:hover {
 }
 
 @media (min-width: 768px) {
-    .top-buttons button {
+    .top-buttons .button {
         width: 31%;
         height: 7.5rem;
         font-size: 2.4rem;
@@ -506,15 +509,15 @@ a:hover, button:hover {
     }
 }
 
-.top-buttons button:nth-child(1) {
+.top-buttons .top-buttons__inquirey {
     background-color: #77CB33;
 }
 
-.top-buttons button:nth-child(2) {
+.top-buttons .top-buttons__freetrial {
     background-color: #F6AA00;
 }
 
-.top-buttons button:nth-child(3) {
+.top-buttons .top-buttons__request {
     background-color: #3AC8AD;
 }
 
@@ -698,7 +701,7 @@ a:hover, button:hover {
 @media (min-width: 768px) {
     .entry {
         height: 23.1rem;
-        padding: 5rem 0 5.5rem;
+        padding: 4.7rem 0 5.5rem;
     }
 }
 
@@ -712,6 +715,7 @@ a:hover, button:hover {
 
 @media (min-width: 768px) {
     .entry__comment {
+        padding-bottom: 1.2rem;
         line-height: calc(42/16);
     }
 }
@@ -735,8 +739,8 @@ a:hover, button:hover {
 @media (min-width: 768px) {
     .entry__button {
         width: 36rem;
-        height: 7.3rem;
-        padding-left: 1.7rem;
+        height: 7.4rem;
+        padding-left: 2rem;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: calc(36/24);
