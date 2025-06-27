@@ -129,13 +129,13 @@ a:hover, button:hover {
 }
 
 .header-logo {
-    padding-left: 1.6rem;
+    padding-left: 1.7rem;
     margin: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 2.2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: calc(33/22);
+}
+
+.header-logo img {
+    width: 16.337rem;
+    height: auto;
 }
 
 .header-logo a {
@@ -145,9 +145,12 @@ a:hover, button:hover {
 @media (min-width: 768px) {
     .header-logo {
         flex-shrink: 0;
-        padding: 0 2rem;
-        font-size: 3.2rem;
-        line-height: calc(36/32);
+        padding-right: 1.6rem;
+        padding-left: 2.2rem;
+    }
+
+    .header-logo img {
+        width: 23.715rem;
     }
 }
 
