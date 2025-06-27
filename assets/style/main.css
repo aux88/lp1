@@ -247,7 +247,7 @@ a:hover, button:hover {
     width: 1.6rem;
     height: 1.6rem;
     content: '';
-    background: url('/assets/image/arrow-right.svg') no-repeat center;
+    background: url('/assets/image/arrow_right.svg') no-repeat center;
     background-size: contain;
 }
 
@@ -990,7 +990,7 @@ a:hover, button:hover {
     width: 1.4rem;
     height: 1.2rem;
     content: '';
-    background: url('/assets/image/arrow-right-blue.svg') no-repeat center;
+    background: url('/assets/image/arrow_right_blue.svg') no-repeat center;
     background-size: contain;
 }
 
