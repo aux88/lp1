@@ -8,6 +8,11 @@ $('.hamburger-button').on('click', function () {
 
 });
 
+// リンクをクリックしたらハンバーガーメニューを閉じる
+$('.header-nav a').on('click', function () {
+    hamburger.removeClass('header-nav-active');
+});
+
 // 画面幅のサイズが変わったら
 $(window).on('resize', function () {
 
@@ -20,4 +25,5 @@ $('#smarttab').smartTab({
     enableUrlHash: false, // タブidにもとづいたURLハッシュの付与を無効
     autoAdjustHeight: false
 });
+
 

@@ -6,6 +6,7 @@
 html {
     /* 1rem=10px */
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -519,11 +520,13 @@ a:hover, button:hover {
 ------------------------- */
 .reason {
     margin-top: .6rem;
+    scroll-margin-top: 7rem;
 }
 
 @media(min-width: 768px) {
     .reason {
         margin-bottom: 7.2rem;
+        scroll-margin-top: 10.1rem;
     }
 }
 
@@ -744,12 +747,14 @@ a:hover, button:hover {
 .course {
     padding-top: 7.4rem;
     padding-bottom: 6rem;
+    scroll-margin-top: 7rem;
 }
 
 @media(min-width: 768px) {
     .course {
         padding-top: 8.2rem;
         padding-bottom: 7rem;
+        scroll-margin-top: 10.1rem;
     }
 }
 
@@ -1005,12 +1010,14 @@ a:hover, button:hover {
 .price {
     padding-top: 7.4rem;
     padding-bottom: 6.1rem;
+    scroll-margin-top: 7rem;
 }
 
 @media (min-width: 768px) {
     .price {
         padding-top: 7.9rem;
         padding-bottom: 3rem;
+        scroll-margin-top: 10.1rem;
     }
 }
 
