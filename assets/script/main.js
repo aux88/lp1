@@ -1,10 +1,10 @@
 //ハンバーガーメニュー
-var hamburger = $('.hamburger-menu');
+var hamburger = $('.header-nav');
 
 // OPEN/CLOSEボタンをクリックしたら
 $('.hamburger-button').on('click', function () {
     // .hamburgerの表示・非表示を繰り返す
-    hamburger.toggleClass('hamburger-menu-active');
+    hamburger.toggleClass('header-nav-active');
 
 });
 
@@ -12,7 +12,7 @@ $('.hamburger-button').on('click', function () {
 $(window).on('resize', function () {
 
     // ハンバーガーメニューを閉じる
-    hamburger.removeClass('hamburger-menu-active');
+    hamburger.removeClass('header-nav-active');
 });
 
 // タブ
