@@ -845,6 +845,12 @@ a:hover, button:hover {
     background-color: #F2F9FF;
 }
 
+@media (min-width: 768px) {
+    .tab-content {
+        border-radius: 0 0 1.2rem 1.2rem;
+    }
+}
+
 .tab.st-theme-basic>.tab-content>.tab-pane {
     padding: 2.6rem 1.6rem;
 }
