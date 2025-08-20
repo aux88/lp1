@@ -738,7 +738,7 @@ a:hover, button:hover {
 
 @media (min-width: 768px) {
     .entry__button,
-.entry__freetrial-button {
+    .entry__freetrial-button {
         width: 36rem;
         height: 7.4rem;
         padding-left: 2rem;
